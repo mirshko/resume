@@ -1,0 +1,48 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    // ABOUT
+    section
+      h1.name {{ resume.name }}
+    section
+      p.title {{ resume.title }}
+      p.location {{ resume.contact.city }}, {{ resume.contact.state }}
+      p.about {{ resume.about }}
+
+    // WORK
+    section
+      h2 work experience
+      each(loop='work of resume.work')
+        .block
+          h3
+            a(target="_blank" href="{{ work.website }}") {{ work.company }}
+          p.role {{ work.title }} | {{ work.timeframe }}
+          if(condition="work.summary")
+            p.summary {{ work.summary }}
+
+    // EDUCATION
+    section
+      h2 education
+      each(loop='education of resume.education')
+        .block
+          h3 {{ education.college }}
+          p.degree {{ education.degree }} - {{ education.major }} | {{ education.timeframe }}
+          ul.accomplishments
+            each(loop='accomplishment of education.accomplishments')
+              li {{ accomplishment }}
+    // PROJECTS
+    section
+      h2 projects
+      each(loop='project of resume.projects')
+        .block
+          h3
+            a(target="_blank" href="{{ project.website }}") {{ project.title }}
+          p.role {{ project.role }}
+          p.summary {{ project.summary }}
+
+    // SKILLS
+    section
+      h2 skills
+      .skills
+        each(loop='skill of resume.skills')
+          li {{ skill }}

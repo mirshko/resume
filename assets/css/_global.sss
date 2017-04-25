@@ -1,0 +1,89 @@
+:root
+  --color: #000
+  --hint: color(var(--color) alpha(38%))
+  --secondary: color(var(--color) alpha(54%))
+  --primary: color(var(--color) alpha(87%))
+  --fontFamily: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  text-transform: uppercase
+  letter-spacing: 1.2px
+  color: var(--primary)
+
+h1
+  font-size: 32px
+
+h2
+  color: var(--hint)
+  font-size: 12px
+  margin-top: 72px
+  margin-bottom: 36px
+
+h3
+  font-size: 18px
+  margin-bottom: 12px
+  & a:hover
+    border-bottom: 2px solid var(--color)
+
+p,
+li
+  color: var(--hint)
+
+p
+  margin-bottom: 8px
+  margin-top: 8px
+
+a
+  text-decoration: none
+  color: var(--primary)
+
+body
+  padding: 60px 0
+  @media (max-width: 600px)
+    padding: 30px 0
+
+  max-width: 600px
+  width: 90%
+  margin: 0 auto
+
+  font-family: var(--fontFamily)
+  line-height: 1.5
+
+section
+  margin-bottom: 48px
+
+ul,
+ol
+  padding-left: 0
+
+li
+  list-style-type: none
+
+.block:not(:last-child)
+  margin-bottom: 48px
+
+.title
+  color: var(--primary)
+
+.education .accomplishments li
+  color: var(--primary)
+
+.project,
+.work
+  & .summary
+    color: var(--primary)
+
+.skills li
+  line-height: 1
+  color: var(--primary)
+  background-color: #ECEFF1
+  display: inline-block
+  padding: 8px 12px
+  margin-right: 4px
+  margin-bottom: 8px
+  font-size: 14px
