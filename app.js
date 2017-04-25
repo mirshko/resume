@@ -12,11 +12,13 @@ module.exports = {
   },
   ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
   reshape: htmlStandards({
-    locals: (ctx) => { return {
-      pageId: pageId(ctx),
-      foo: 'bar',
-      resume
-    } }
+    locals: (ctx) => {
+      return {
+        pageId: pageId(ctx),
+        foo: 'bar',
+        resume
+      }
+    }
   }),
   postcss: cssStandards(),
   babel: jsStandards()
