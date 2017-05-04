@@ -18,7 +18,7 @@
     "ava": "^0.19.0",
     "rimraf": "^2.6.0",
     "snazzy": "^6.0.0",
-    "spike": "^1.0.0",
+    "spike": "^1.2.0",
     "spike-core": "^1.0.0",
     "standard": "^10.0.0"
   },
@@ -27,6 +27,8 @@
   "private": true,
   "repository": "https://github.com/mirshko/resume",
   "scripts": {
+    "start": "spike watch",
+    "build": "rimraf public && spike compile",
     "lint": "standard | snazzy",
     "precommit": "npm run lint -s",
     "pretest": "npm run lint -s",
